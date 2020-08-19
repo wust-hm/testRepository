@@ -13,10 +13,10 @@ public class UserController {
     private UserRepository userRepository;
 
     /**
-     * 保存一个用户
-     * @param name
-     * @param age
-     * @return
+     * @description: 保存一个用户
+     * @param userParams: 用户参数列表
+     * @return: com.angelo.User
+     * @date: 2020/8/19 8:10
      */
     @PostMapping(value = "/user")
     public User userAdd(@RequestBody User userParams) {
