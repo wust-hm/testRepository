@@ -28,8 +28,10 @@ public class UserController {
     }
 
     /**
-     * 查询用户列表
-     * @return
+     * @description: 查询用户列表
+     * @param : 无参数
+     * @return: java.util.List<com.angelo.User>
+     * @date: 2020/8/23 22:22
      */
     @RequestMapping(value = "/user/list")
     public List<User> userList() {
@@ -37,9 +39,10 @@ public class UserController {
     }
 
     /**
-     * 根据id查找一个用户
-     * @param id
-     * @return
+     * @description: 根据id查找一个用户
+     * @param id: 用户id
+     * @return: java.util.Optional<com.angelo.User>
+     * @date: 2020/8/23 22:21
      */
     @RequestMapping(value = "/user/{id}")
     public Optional<User> userFindOne(@PathVariable("id") Integer id) {
@@ -47,9 +50,10 @@ public class UserController {
     }
 
     /**
-     * 根据name获取用户信息
-     * @param name
-     * @return
+     * @description: 根据name获取用户信息
+     * @param name: 用户名字
+     * @return: java.util.List<com.angelo.User>
+     * @date: 2020/8/23 22:23
      */
     @RequestMapping(value = "/user/name", method = RequestMethod.GET)
     public List<User> findUserListByName(@RequestParam(name="name",defaultValue="") String name) {
@@ -57,11 +61,12 @@ public class UserController {
     }
 
     /**
-     * 更新用户信息
-     * @param id
-     * @param name
-     * @param age
-     * @return
+     * @description: 更新用户信息
+     * @param id:
+     * @param name:
+     * @param age:
+     * @return: com.angelo.User
+     * @date: 2020/8/23 22:24
      */
     @PutMapping(value = "/user/{id}")
     public User userUpdate(
@@ -78,8 +83,10 @@ public class UserController {
     }
 
     /**
-     * 删除一个用户信息
-     * @param id
+     * @description: 删除一个用户信息
+     * @param id: 用户id
+     * @return: void
+     * @date: 2020/8/23 22:25
      */
     @DeleteMapping(value = "/user/{id}")
     public void deleteUser(@PathVariable("id") Integer id) {
